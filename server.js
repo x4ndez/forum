@@ -7,9 +7,9 @@ const PORT = process.env.PORT || 3001;
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
-server.use(require("./routes/index.js"));
 // server.use(express.static(path.join(__dirname, "public")));
 
+server.use(require("./routes"));
 
 sequelize.sync({ force: false }).then(() => {
 
