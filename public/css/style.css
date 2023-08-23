@@ -1,0 +1,33 @@
+body {
+
+    /* background-color: red; */
+
+}
+
+.comment,
+.thread {
+
+    color: grey;
+    width: 50%;
+    min-height: fit-content;
+    box-sizing: border-box;
+    border: 1px dotted grey;
+    border-radius: 1rem;
+    padding: 1rem;
+    margin: 1rem;
+
+    transition: 1s margin-left;
+
+}
+
+.comment:hover {
+
+    margin-left: 3rem;
+
+}
+
+.thread {
+
+    color: orange;
+
+}

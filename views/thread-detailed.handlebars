@@ -1,0 +1,16 @@
+<div class="thread">
+
+    <h1>Thread:</h1>
+
+    <h2>{{thread.title}}</h2>
+    <p>{{thread.content}}</p>
+    {{!-- <p><b>Author:</b> {{user.username}}</p> --}}
+    <p><b>Posted:</b> {{thread.createdAt}}</p>
+
+    {{#each thread.comments as |comment|}}
+
+    {{> comment-thread}}
+
+    {{/each}}
+
+</div>

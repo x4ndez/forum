@@ -7,11 +7,32 @@ const {
 
 router.get("/", async (req, res) => {
 
-    const x = await Thread.findAll({
+    const threads = await Thread.findAll({
+        // raw: true,
         include: [{ model: Comment }],
     });
 
-    res.status(200).json(x);
+    // const threadsx = threads.map((thread) => {
+    //     return thread.get({ plain: true });
+    // });
+
+    res.status(200).json(threads);
+
+});
+
+router.get("/:id", async (req, res) => {
+
+    const findThreadById = await Thread.findByPk({
+        // raw: true,
+        include: [{ model: Comment }, { model: User }],
+    });
+
+    const threadById = findThreadById.map((thread) => {
+        return thread.get({ plain: true });
+    });
+
+    console.log(threadById);
+    res.render("thread-detailed", { threadById });
 
 });
 

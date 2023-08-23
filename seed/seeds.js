@@ -5,7 +5,7 @@ const Comment = require("../models/Comment.js");
 const users = [
 
     {
-        username: "alex",
+        username: "sk8erboi69",
         password: "cooldude",
     },
     {
@@ -13,7 +13,7 @@ const users = [
         password: "admin123456",
     },
     {
-        username: "superbro",
+        username: "limpbizkitrox36",
         password: "WHATTHEFUCK",
     },
 
@@ -48,7 +48,7 @@ const comments = [
     },
     {
         content: "Nah, it's okay bro I'm here 4 u",
-        user_id: 2,
+        user_id: 1,
         thread_id: 1
     },
     {

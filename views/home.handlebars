@@ -1,1 +1,16 @@
-lol
+{{#each threads as |thread|}}
+
+<div class="thread">
+
+    <a href="/thread/{{thread.id}}">
+        <h2>{{title}}</h2>
+    </a>
+    <p>{{content}}</p>
+    <p><b>Author:</b> {{user.username}}</p>
+    <p><b>Posted:</b> {{createdAt}}</p>
+
+</div>
+
+{{/each}}
+
+{{!-- <p>{{content.[0]}}</p> --}}

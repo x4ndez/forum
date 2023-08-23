@@ -2,22 +2,31 @@ const User = require("./User.js");
 const Thread = require("./Thread.js");
 const Comment = require("./Comment.js");
 
-User.hasMany(Thread);
+// 1 user has many threads, 1 thread has 1 user
+User.hasMany(Thread, {
+    foreignKey: "user_id",
+});
 
 Thread.belongsTo(User, {
-    foreignKey: "user_id",
+
 });
 
-User.hasMany(Comment);
+// 1 user has many comments, 1 comment has 1 user
+User.hasMany(Comment, {
+    foreignKey: "user_id",
+});
 
 Comment.belongsTo(User, {
-    foreignKey: "user_id",
+
 });
 
-Thread.hasMany(Comment);
+// 1 thread has many comments, 1 comment has 1 thread
+Thread.hasMany(Comment, {
+    foreignKey: "thread_id",
+});
 
 Comment.belongsTo(Thread, {
-    foreignKey: "thread_id",
+    // foreignKey: "thread_id",
 });
 
 module.exports = {
