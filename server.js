@@ -1,17 +1,18 @@
 const express = require("express");
+const sequelize = require("./db/connection.js");
 const path = require("path");
-const routes = require("./routes");
 
 const server = express();
 const PORT = process.env.PORT || 3001;
 
 server.use(express.json());
 server.use(express.urlencoded({ extended: true }));
-server.use(express.static(path.join(__dirname, "public")));
-server.use(routes);
+server.use(require("./routes/index.js"));
+// server.use(express.static(path.join(__dirname, "public")));
 
-server.listen(PORT, () => {
 
-    console.log(`Server listening on port ${PORT}`);
+sequelize.sync({ force: false }).then(() => {
+
+    server.listen(PORT, () => console.log(`Server listening on port ${PORT}`))
 
 });
