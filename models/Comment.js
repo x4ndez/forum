@@ -20,7 +20,7 @@ Comment.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "Thread",
+                model: "threads",
                 key: "id",
             }
         },
@@ -28,12 +28,12 @@ Comment.init(
             type: DataTypes.INTEGER,
             allowNull: false,
             references: {
-                model: "User",
+                model: "users",
                 key: "id",
             }
         },
         timestamp: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             defaultValue: DataTypes.NOW,
             allowNull: false,
         },
@@ -43,7 +43,7 @@ Comment.init(
         freezeTableName: true,
         underscored: true,
         modelName: "comments",
-    }
+    },
 
 );
 

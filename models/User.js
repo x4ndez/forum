@@ -21,7 +21,7 @@ User.init(
             allowNull: false,
         },
         accountCreated: {
-            type: DataTypes.DATETIME,
+            type: DataTypes.DATE,
             defaultValue: DataTypes.NOW,
             allowNull: false,
         },
@@ -31,7 +31,7 @@ User.init(
         freezeTableName: true,
         underscored: true,
         modelName: "users",
-    }
+    },
 
 );
 
