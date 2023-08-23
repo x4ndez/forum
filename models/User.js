@@ -19,20 +19,15 @@ User.init(
         password: {
             type: DataTypes.STRING,
             allowNull: false,
-        },
-        accountCreated: {
-            type: DataTypes.DATE,
-            defaultValue: DataTypes.NOW,
-            allowNull: false,
-        },
+        }
     },
     {
         sequelize,
         freezeTableName: true,
         underscored: true,
         modelName: "users",
-    },
+    }
 
 );
 
-module.exports = User;
+module.exports = User; 

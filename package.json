@@ -9,7 +9,7 @@
   "scripts": {
     "start": "node server.js",
     "watch": "nodemon server.js",
-    "seed": ""
+    "seed": "node ./seed/seeds.js"
   },
   "name": "forum",
   "version": "1.0.0",

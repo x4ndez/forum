@@ -32,11 +32,6 @@ Comment.init(
                 key: "id",
             }
         },
-        timestamp: {
-            type: DataTypes.DATE,
-            defaultValue: DataTypes.NOW,
-            allowNull: false,
-        },
     },
     {
         sequelize,
