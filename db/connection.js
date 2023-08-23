@@ -14,15 +14,4 @@ const sequelize = new Sequelize(
     }
 );
 
-// try {
-
-//     await sequelize.authenticate();
-//     console.log("Connected to database successfully!");
-
-// } catch (err) {
-
-//     console.log("Failed to connect to database");
-
-// }
-
 module.exports = sequelize;
