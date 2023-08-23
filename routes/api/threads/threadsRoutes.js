@@ -1,7 +1,5 @@
-// API ROUTER
-
 const router = require("express").Router();
 
-router.use("/threads", require("./threads"));
+// localhost/api/threads
 
 module.exports = router;
